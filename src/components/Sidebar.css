@@ -1,0 +1,15 @@
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  /* Ensure the sidebar is off-screen initially */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  /* Bring the sidebar on-screen */
+}
+
+.sidebar.closed {
+  transform: translateX(100%);
+  /* Move the sidebar off-screen */
+}
