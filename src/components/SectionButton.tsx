@@ -16,13 +16,22 @@ const SectionButton = ({
   isActive,
   onClick,
 }: Props) => {
+  const handleButtonClick = () => {
+    onClick(sectionName);
+
+    const section = document.getElementById(sectionName);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <Tooltip.Provider delayDuration={0}>
       <Tooltip.Root>
         <Tooltip.Trigger asChild>
           <button
             className={`mb-2 ${isActive ? "active-section" : ""}`}
-            onClick={() => onClick(sectionName)}
+            onClick={handleButtonClick}
           >
             <Icon className="text-xl" />
           </button>

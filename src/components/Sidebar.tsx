@@ -13,7 +13,7 @@ import "./Sidebar.css";
 
 const Sidebar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [currentSection, setCurrentSection] = useState("");
+  const [currentSection, setCurrentSection] = useState<string | null>(null);
 
   const handleSectionClick = (sectionName: string) => {
     setCurrentSection(sectionName);
