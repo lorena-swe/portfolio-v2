@@ -32,7 +32,9 @@ const Sidebar = () => {
         <div className="hidden md:flex flex-col">
           {/* Logo */}
           <div className="flex items-center justify-center h-16">
-            <img alt="Logo" src={logo} />
+            <a href="/" className="text-center">
+              <img alt="Logo" src={logo} />
+            </a>
           </div>
 
           {/* Section Buttons */}
@@ -53,13 +55,21 @@ const Sidebar = () => {
 
           {/* Social Buttons */}
           <div className="flex flex-col items-center">
-            <a href="#" className="text-center">
+            <a
+              href="https://github.com/lorena-swe"
+              target="blank"
+              className="text-center"
+            >
               <FaGithub />
             </a>
-            <a href="#" className="text-center">
+            <a
+              href="https://www.linkedin.com/in/lorena-zotaj/"
+              target="blank"
+              className="text-center"
+            >
               <FaLinkedin />
             </a>
-            <a href="#" className="text-center">
+            <a href="mailto:lorenazotaj10@gmail.com" className="text-center">
               <FaEnvelopeOpenText />
             </a>
           </div>
