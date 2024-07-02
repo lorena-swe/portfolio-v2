@@ -1,7 +1,7 @@
 import React from "react";
 
 const MainSection = () => {
-  return <div>MainSection</div>;
+  return <div>MainSection Yeeeeeeeeeeeeee</div>;
 };
 
 export default MainSection;

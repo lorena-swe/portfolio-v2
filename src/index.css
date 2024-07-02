@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+light blue: rgb(56, 189, 248)        → for buttons and highlights
+light gray-blue: rgb(148, 163, 184)  → for text
+medium gray-blue: rgb(30, 41, 59) → for inactive buttons and cards/boxes
+dark blue: rgb(15, 23, 42)           → for background
+*/
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,6 +22,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   /* background: #0C1224; */
-  background: #190028;
+  background: rgb(15, 23, 42);
   color: #fff;
 }

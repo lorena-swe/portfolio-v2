@@ -13,3 +13,36 @@
   transform: translateX(100%);
   /* Move the sidebar off-screen */
 }
+
+.nav-section {
+  background: rgb(30, 41, 59);
+  color: #68778d;
+  width: 70px;
+  border-radius: 20px;
+  padding: 15px 0;
+}
+
+.nav-section button {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-section button:hover, .nav-section a:hover {
+  color: #fff;
+  background: rgba(56, 189, 248, 0.7);
+}
+
+.active-section {
+  color: #fff;
+  background: rgb(56, 189, 248);
+}
+
+.TooltipContent {
+  background: #68778d;
+  padding: 4px 10px;
+  border-radius: 7px;
+}
