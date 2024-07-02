@@ -5,7 +5,7 @@
 /*
 light blue: rgb(56, 189, 248)        → for buttons and highlights
 light gray-blue: rgb(148, 163, 184)  → for text
-medium gray-blue: rgb(30, 41, 59) → for inactive buttons and cards/boxes
+medium gray-blue: rgb(30, 41, 59)    → for inactive buttons and cards/boxes
 dark blue: rgb(15, 23, 42)           → for background
 */
 
@@ -19,6 +19,7 @@ html, body, #root {
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
