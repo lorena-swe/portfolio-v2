@@ -16,7 +16,7 @@
   padding: 8px 16px;
   cursor: pointer;
   border-left: 2px solid gray;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .tabs-trigger.active {
