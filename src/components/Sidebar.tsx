@@ -8,8 +8,8 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import logo from "../assets/react.svg";
+import SectionButton from "./SectionButton";
 import "./Sidebar.css";
-import * as Tooltip from "@radix-ui/react-tooltip";
 
 const Sidebar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,6 +18,12 @@ const Sidebar = () => {
   const handleSectionClick = (sectionName: string) => {
     setCurrentSection(sectionName);
   };
+
+  const sections = [
+    { name: "about", icon: FaAddressCard, label: "About" },
+    { name: "projects", icon: FaCode, label: "Projects" },
+    { name: "experience", icon: FaBriefcase, label: "Experience" },
+  ];
 
   return (
     <>
@@ -32,104 +38,16 @@ const Sidebar = () => {
           {/* Section Buttons */}
           <div className="flex-1 flex items-center justify-center">
             <div className="nav-section flex-1 flex flex-col items-center">
-              <Tooltip.Provider delayDuration={0}>
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <button
-                      className={`mb-2 ${
-                        currentSection === "about" ? "active-section" : ""
-                      }`}
-                      onClick={() => handleSectionClick("about")}
-                    >
-                      <FaAddressCard className="text-xl" />
-                    </button>
-                  </Tooltip.Trigger>
-                  <Tooltip.Portal>
-                    <Tooltip.Content
-                      className="TooltipContent"
-                      side="right"
-                      sideOffset={15}
-                    >
-                      About
-                      <Tooltip.Arrow className="TooltipArrow" />
-                    </Tooltip.Content>
-                  </Tooltip.Portal>
-                </Tooltip.Root>
-              </Tooltip.Provider>
-
-              <Tooltip.Provider delayDuration={0}>
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <button
-                      className={`mb-2 ${
-                        currentSection === "projects" ? "active-section" : ""
-                      }`}
-                      onClick={() => handleSectionClick("projects")}
-                    >
-                      <FaCode className="text-xl" />
-                    </button>
-                  </Tooltip.Trigger>
-                  <Tooltip.Portal>
-                    <Tooltip.Content
-                      className="TooltipContent"
-                      side="right"
-                      sideOffset={15}
-                    >
-                      Projects
-                      <Tooltip.Arrow className="TooltipArrow" />
-                    </Tooltip.Content>
-                  </Tooltip.Portal>
-                </Tooltip.Root>
-              </Tooltip.Provider>
-
-              <Tooltip.Provider delayDuration={0}>
-                <Tooltip.Root>
-                  <Tooltip.Trigger asChild>
-                    <button
-                      className={`mb-2 ${
-                        currentSection === "experience" ? "active-section" : ""
-                      }`}
-                      onClick={() => handleSectionClick("experience")}
-                    >
-                      <FaBriefcase className="text-xl" />
-                    </button>
-                  </Tooltip.Trigger>
-                  <Tooltip.Portal>
-                    <Tooltip.Content
-                      className="TooltipContent"
-                      side="right"
-                      sideOffset={15}
-                    >
-                      Experience
-                      <Tooltip.Arrow className="TooltipArrow" />
-                    </Tooltip.Content>
-                  </Tooltip.Portal>
-                </Tooltip.Root>
-              </Tooltip.Provider>
-              {/* <button
-                className={`mb-2 ${
-                  currentSection === "about" ? "active-section" : ""
-                }`}
-                onClick={() => handleSectionClick("about")}
-              >
-                <FaAddressCard className="text-xl" />
-              </button> */}
-              {/* <button
-                className={`mb-2 ${
-                  currentSection === "projects" ? "active-section" : ""
-                }`}
-                onClick={() => handleSectionClick("projects")}
-              >
-                <FaCode className="text-xl" />
-              </button> */}
-              {/* <button
-                className={`mb-2 ${
-                  currentSection === "experience" ? "active-section" : ""
-                }`}
-                onClick={() => handleSectionClick("experience")}
-              >
-                <FaBriefcase className="text-xl" />
-              </button> */}
+              {sections.map((section) => (
+                <SectionButton
+                  key={section.name}
+                  sectionName={section.name}
+                  icon={section.icon}
+                  label={section.label}
+                  isActive={currentSection === section.name}
+                  onClick={handleSectionClick}
+                />
+              ))}
             </div>
           </div>
 
