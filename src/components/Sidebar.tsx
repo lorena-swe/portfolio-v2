@@ -39,7 +39,10 @@ const Sidebar = () => {
         <div className="hidden md:flex flex-col">
           {/* Logo */}
           <div className="flex items-center justify-center h-16">
-            <a className="text-center" onClick={handleHomeRedirect}>
+            <a
+              className="text-center cursor-pointer"
+              onClick={handleHomeRedirect}
+            >
               <img alt="Logo" src={logo} />
             </a>
           </div>

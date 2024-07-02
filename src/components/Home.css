@@ -1,10 +1,50 @@
+/* Keyframes for the fade-in and bottom-to-top motion */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Applying the animation to each text element */
+.intro-text,
+.name-text,
+.catchy-phrase,
+.d-parag {
+  opacity: 0; /* Starts hidden */
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Queue the animations */
 .intro-text {
-  color: rgb(56, 189, 248);
-  letter-spacing: 4px;
+  animation-delay: 0.2s;
 }
 
 .name-text {
-  font-size: 100px;
+  animation-delay: 0.4s;
+}
+
+.catchy-phrase {
+  animation-delay: 0.6s;
+}
+
+.d-parag {
+  animation-delay: 0.8s;
+}
+
+/* General styling */
+.intro-text {
+  color: rgb(56, 189, 248);
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.name-text {
+  font-size: 85px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   line-height: 100px;
@@ -23,9 +63,46 @@
 
 .d-parag {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
 }
 
 strong {
   color: rgb(56, 189, 248);
+}
+
+
+@media screen and (max-width: 767.5px) {
+  .name-text {
+    font-size: 65px;
+    line-height: 80px;
+  }
+
+  .catchy-phrase {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .d-parag {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .name-text {
+    font-size: 50px;
+    line-height: 65px;
+  }
+
+  .catchy-phrase {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .d-parag {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

@@ -1,0 +1,40 @@
+/* Container for the tabs and content */
+.tabs-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* List of tabs displayed in a column */
+.tabs-list {
+  display: flex;
+  flex-direction: column;
+  margin-right: 16px; /* Adjust spacing as needed */
+}
+
+/* Style individual tab triggers */
+.tabs-trigger {
+  padding: 8px 16px;
+  cursor: pointer;
+  border-left: 2px solid gray;
+  transition: background-color 0.2s ease;
+}
+
+.tabs-trigger.active {
+  border-left: 2px solid #007bff;
+  color: #007bff;
+}
+
+.tabs-trigger:hover {
+  background-color: #007bff2f;
+  color: #007bff;
+}
+
+/* Container for the tab content */
+.tabs-content-container {
+  flex-grow: 1;
+}
+
+/* Style individual tab content */
+.tabs-content {
+  display: block;
+}
