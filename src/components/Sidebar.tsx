@@ -15,6 +15,13 @@ const Sidebar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState<string | null>(null);
 
+  const handleHomeRedirect = () => {
+    const section = document.getElementById("home");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleSectionClick = (sectionName: string) => {
     setCurrentSection(sectionName);
   };
@@ -32,7 +39,7 @@ const Sidebar = () => {
         <div className="hidden md:flex flex-col">
           {/* Logo */}
           <div className="flex items-center justify-center h-16">
-            <a href="/" className="text-center">
+            <a className="text-center" onClick={handleHomeRedirect}>
               <img alt="Logo" src={logo} />
             </a>
           </div>
