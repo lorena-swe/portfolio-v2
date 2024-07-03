@@ -1,62 +1,93 @@
-/* Container for the tabs and content */
 .tabs-container {
   display: flex;
   align-items: flex-start;
 }
 
-/* List of tabs displayed in a column */
 .tabs-list {
   display: flex;
   flex-direction: column;
-  margin-right: 16px; /* Adjust spacing as needed */
+  margin-right: 16px;
 }
 
-/* Style individual tab triggers */
 .tabs-trigger {
-  position: relative; /* Make the element relative to position the pseudo-element */
-  padding: 8px 16px;
+  position: relative;
+  padding: 12px 16px;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
-  border: none; /* Remove the default border */
+  border: none; 
+  text-align: left;
+  color: rgb(148, 163, 184);
 }
 
 .tabs-trigger::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 1px;
+  left: 2px;
   height: 100%;
-  width: 2px;
-  background-color: gray;
+  width: 1px;
+  background-color: rgba(148, 163, 184, 0.5);
   transition: background-color 0.2s ease;
 }
 
 .tabs-trigger.active::before {
   left: 0;
   width: 4px;
-  background-color: #007bff;
+  background-color: rgb(56, 189, 248);
   border-radius: 10px;
 }
 
 .tabs-trigger:hover::before {
-  background-color: #007bff;
+  background-color: rgb(56, 189, 248);
 }
 
 .tabs-trigger.active {
-  color: #007bff;
+  color: rgb(56, 189, 248);
 }
 
 .tabs-trigger:hover {
-  background-color: #007bff2f;
-  color: #007bff;
+  background-color: rgba(56, 189, 248, 0.2);
+  color: rgb(56, 189, 248);
 }
 
-/* Container for the tab content */
 .tabs-content-container {
   flex-grow: 1;
 }
 
-/* Style individual tab content */
 .tabs-content {
   display: block;
 }
+
+.exp-title {
+  font-size: 20px;
+}
+
+.exp-date {
+  color: rgb(148, 163, 184);
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0 0 12px 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.exp-bullets {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+}
+
+.exp-bullets li {
+  position: relative;
+  padding-left: 30px; /* Space for custom bullet */
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.exp-bullets li::before {
+  /* content: '☆'; */
+  content: '▹';
+  position: absolute;
+  left: 5px;
+  color: rgb(56, 189, 248);
+  font-size: 22px;
+  line-height: 23px;
+}
+
