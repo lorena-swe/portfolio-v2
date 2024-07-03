@@ -4,6 +4,17 @@ import "./ExperienceSection.css";
 
 function ExperienceSection() {
   const [activeTab, setActiveTab] = useState("tab1");
+  const [fadeClass, setFadeClass] = useState("fade-in");
+
+  const handleTabChange = (tab: string) => {
+    if (tab !== activeTab) {
+      setFadeClass("fade-out");
+      setTimeout(() => {
+        setActiveTab(tab);
+        setFadeClass("fade-in");
+      }, 500); // Match this duration with your animation duration
+    }
+  };
 
   return (
     <div
@@ -16,7 +27,7 @@ function ExperienceSection() {
             className={`tabs-trigger w-full ${
               activeTab === "tab1" ? "active" : ""
             }`}
-            onClick={() => setActiveTab("tab1")}
+            onClick={() => handleTabChange("tab1")}
           >
             Deloitte
           </button>
@@ -24,7 +35,7 @@ function ExperienceSection() {
             className={`tabs-trigger w-full  ${
               activeTab === "tab2" ? "active" : ""
             }`}
-            onClick={() => setActiveTab("tab2")}
+            onClick={() => handleTabChange("tab2")}
           >
             Salesforce Industries
           </button>
@@ -32,14 +43,14 @@ function ExperienceSection() {
             className={`tabs-trigger w-full  ${
               activeTab === "tab3" ? "active" : ""
             }`}
-            onClick={() => setActiveTab("tab3")}
+            onClick={() => handleTabChange("tab3")}
           >
             Amazon
           </button>
         </div>
         <div className="tabs-content-container max-w-full lg:max-w-xl">
           {activeTab === "tab1" && (
-            <div className="tabs-content">
+            <div className={`tabs-content ${fadeClass}`}>
               <div className="exp-title">
                 Frontend Engineer{" "}
                 <strong>
@@ -87,7 +98,7 @@ function ExperienceSection() {
             </div>
           )}
           {activeTab === "tab2" && (
-            <div className="tabs-content">
+            <div className={`tabs-content ${fadeClass}`}>
               <div className="exp-title">
                 Salesforce Developer{" "}
                 <strong>
@@ -121,7 +132,7 @@ function ExperienceSection() {
             </div>
           )}
           {activeTab === "tab3" && (
-            <div className="tabs-content">
+            <div className={`tabs-content ${fadeClass}`}>
               <div className="exp-title">
                 IT Support Engineer Intern{" "}
                 <strong>

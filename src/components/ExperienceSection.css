@@ -1,5 +1,4 @@
-@import '@radix-ui/colors/mauve.css';
-
+/* General styles */
 .tabs-container {
   display: flex;
   align-items: flex-start;
@@ -54,10 +53,40 @@
 
 .tabs-content-container {
   flex-grow: 1;
+  position: relative;
 }
 
 .tabs-content {
   display: block;
+  opacity: 0;
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .exp-title {
@@ -89,7 +118,6 @@
 }
 
 .exp-bullets li::before {
-  /* content: '☆'; */
   content: '▹';
   position: absolute;
   left: 5px;
@@ -110,33 +138,6 @@
   z-index: 1000;
 }
 
-.hover-card-content img {
-  max-width: 100%;
-  border-radius: 50%;
-}
-
-.hover-card-content h3 {
-  margin: 0;
-  font-size: 1.25rem;
-}
-
-.hover-card-content p {
-  margin: 0.5rem 0 0;
-  font-size: 0.875rem;
-}
-
-/* Override the minHeight for HoverCard content */
-.hover-card-content {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  background-color: white;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
 @supports (min-height: 100dvh) {
   .radix-themes:where([data-is-root-theme='true']) .hover-card-content {
     min-height: auto !important;
@@ -146,9 +147,6 @@
 .radix-themes:where([data-is-root-theme='true']) .hover-card-content {
   min-height: auto !important;
 }
-
-
-
 
 a {
   all: unset;
@@ -176,10 +174,6 @@ a {
 .HoverCardContent[data-side='left'] {
   animation-name: slideRightAndFade;
 }
-/*
-.HoverCardArrow {
-  fill: white;
-} */
 
 .ImageTrigger {
   cursor: pointer;
