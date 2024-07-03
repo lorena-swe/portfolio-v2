@@ -1,3 +1,5 @@
+@import '@radix-ui/colors/mauve.css';
+
 .tabs-container {
   display: flex;
   align-items: flex-start;
@@ -14,7 +16,7 @@
   padding: 12px 16px;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
-  border: none; 
+  border: none;
   text-align: left;
   color: rgb(148, 163, 184);
 }
@@ -71,14 +73,19 @@
 }
 
 .exp-bullets {
-  list-style: none; /* Remove default bullets */
+  list-style: none;
   padding-left: 0;
+  color: rgb(148, 163, 184);
 }
 
 .exp-bullets li {
   position: relative;
-  padding-left: 30px; /* Space for custom bullet */
-  margin-bottom: 10px; /* Adjust spacing as needed */
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.exp-bullets li:hover {
+  color: #fff;
 }
 
 .exp-bullets li::before {
@@ -91,3 +98,198 @@
   line-height: 23px;
 }
 
+/* Ensure the hover card content only takes up necessary space */
+.hover-card-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.hover-card-content img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.hover-card-content h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.hover-card-content p {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+}
+
+/* Override the minHeight for HoverCard content */
+.hover-card-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+@supports (min-height: 100dvh) {
+  .radix-themes:where([data-is-root-theme='true']) .hover-card-content {
+    min-height: auto !important;
+  }
+}
+
+.radix-themes:where([data-is-root-theme='true']) .hover-card-content {
+  min-height: auto !important;
+}
+
+
+
+
+a {
+  all: unset;
+}
+
+.HoverCardContent {
+  border-radius: 6px;
+  padding: 20px;
+  width: 300px;
+  background-color: white;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+.HoverCardContent[data-side='top'] {
+  animation-name: slideDownAndFade;
+}
+.HoverCardContent[data-side='right'] {
+  animation-name: slideLeftAndFade;
+}
+.HoverCardContent[data-side='bottom'] {
+  animation-name: slideUpAndFade;
+}
+.HoverCardContent[data-side='left'] {
+  animation-name: slideRightAndFade;
+}
+/*
+.HoverCardArrow {
+  fill: white;
+} */
+
+.ImageTrigger {
+  cursor: pointer;
+  border-radius: 100%;
+  display: inline-block;
+}
+.ImageTrigger:focus {
+  box-shadow: 0 0 0 2px white;
+}
+
+.Image {
+  display: block;
+  border-radius: 100%;
+}
+.Image.normal {
+  width: 45px;
+  height: 45px;
+}
+.Image.large {
+  width: 60px;
+  height: 60px;
+}
+
+.Text {
+  margin: 0;
+  color: var(--mauve-12);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.Text.faded {
+  color: var(--mauve-10);
+}
+.Text.bold {
+  font-weight: 500;
+}
+
+.company-desc {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@keyframes slideUpAndFade {
+  0% {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRightAndFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDownAndFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftAndFade {
+  0% {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.linkedin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  background-color: #0077B5; /* LinkedIn blue */
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: 'Roboto Mono', monospace;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.linkedin-button:hover {
+  background-color: #005582;
+}
+
+.linkedin-text {
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.linkedin-logo {
+  display: flex;
+  align-items: center;
+}

@@ -1,14 +1,6 @@
 import { useState } from "react";
+import CompanyHoverCard from "./CompanyHoverCard";
 import "./ExperienceSection.css";
-import {
-  Avatar,
-  Box,
-  Flex,
-  Heading,
-  HoverCard,
-  Link,
-  Text,
-} from "@radix-ui/themes";
 
 function ExperienceSection() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -16,7 +8,7 @@ function ExperienceSection() {
   return (
     <div
       id="experience"
-      className="section h-screen w-full py-10 px-8 md:px-16 flex flex-col border border-sky-500 justify-start"
+      className="section h-screen w-full py-10 px-8 md:px-16 flex flex-col border border-sky-500 justify-start items-center"
     >
       <div className="tabs-container border border-sky-500">
         <div className="tabs-list flex flex-row sm:flex-col min-w-48">
@@ -51,32 +43,13 @@ function ExperienceSection() {
               <div className="exp-title">
                 Frontend Engineer{" "}
                 <strong>
-                  <HoverCard.Root>
-                    <HoverCard.Trigger>
-                      <Link href="https://twitter.com/radix_ui" target="_blank">
-                        @ Deloitte
-                      </Link>
-                    </HoverCard.Trigger>
-                    <HoverCard.Content maxWidth="300px">
-                      <Flex gap="4">
-                        <Avatar
-                          size="3"
-                          fallback="R"
-                          radius="full"
-                          src="https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png"
-                        />
-                        <Box>
-                          <Heading size="3" as="h3">
-                            Radix
-                          </Heading>
-                          <Text as="div" size="2">
-                            React components, icons, and colors for building
-                            high-quality, accessible UI.
-                          </Text>
-                        </Box>
-                      </Flex>
-                    </HoverCard.Content>
-                  </HoverCard.Root>
+                  <CompanyHoverCard
+                    label="Deloitte"
+                    description="Deloitte is a global professional services firm offering audit, consulting, tax, and advisory services to clients in various industries, helping them navigate complex challenges and achieve growth."
+                    followersCount="16M"
+                    employeesCount="10K+"
+                    link="https://www.linkedin.com/company/deloitte/"
+                  />
                 </strong>
               </div>
               <p className="exp-date">December 2022 - Present</p>
@@ -115,11 +88,20 @@ function ExperienceSection() {
           )}
           {activeTab === "tab2" && (
             <div className="tabs-content">
-              <div>
-                Salesforce Developer <strong>@ Salesforce Industries</strong>
+              <div className="exp-title">
+                Salesforce Developer{" "}
+                <strong>
+                  <CompanyHoverCard
+                    label="Salesforce Industries"
+                    description="Salesforce is a leading cloud-based software company providing customer relationship management (CRM) solutions and enterprise applications focused on customer service, marketing automation, and analytics."
+                    followersCount="5M"
+                    employeesCount="10K+"
+                    link="https://www.linkedin.com/company/salesforce/"
+                  />
+                </strong>
               </div>
-              <p>April 2002 - July 2022</p>
-              <ul>
+              <p className="exp-date">April 2022 - July 2022</p>
+              <ul className="exp-bullets">
                 <li>
                   Configured, deployed, and maintained Salesforce Components and
                   metadata across three projects.
@@ -140,14 +122,23 @@ function ExperienceSection() {
           )}
           {activeTab === "tab3" && (
             <div className="tabs-content">
-              <div>
-                IT Support Engineer Intern <strong>@ Amazon</strong>
+              <div className="exp-title">
+                IT Support Engineer Intern{" "}
+                <strong>
+                  <CompanyHoverCard
+                    label="Amazon"
+                    description="Amazon is a multinational technology company specializing in e-commerce, cloud computing, digital streaming, and artificial intelligence, renowned for its vast online marketplace and innovative services."
+                    followersCount="31M"
+                    employeesCount="10K+"
+                    link="https://www.linkedin.com/company/amazon/"
+                  />
+                </strong>
               </div>
-              <p>March 2021 - May 2021</p>
-              <ul>
+              <p className="exp-date">March 2021 - May 2021</p>
+              <ul className="exp-bullets">
                 <li>
                   Developed and designed front-end interfaces for internal tools
-                  and websites
+                  and websites using JavaScript, HTML and CSS
                 </li>
                 <li>
                   Contributed to implementation discussions on daily meetings
