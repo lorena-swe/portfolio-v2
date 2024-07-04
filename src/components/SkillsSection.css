@@ -11,7 +11,6 @@ span {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
   padding: 20px;
   background-color: rgb(15, 23, 42);
 }

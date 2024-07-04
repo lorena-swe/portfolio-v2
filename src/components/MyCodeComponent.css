@@ -1,0 +1,62 @@
+.code-tab {
+  width: 100%;
+  background-color: rgb(30, 30, 30); /* Background color similar to VSCode */
+  border-radius: 10px;
+  overflow: hidden;
+  /* margin: 20px 0; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better appearance */
+}
+
+.tab-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(20, 20, 20); /* Darker color for the header */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.red {
+  background-color: #ff8f89;
+}
+
+.yellow {
+  background-color: #ffecc4;
+}
+
+.green {
+  background-color: rgb(56, 189, 248);
+}
+
+.code-container {
+  padding: 15px;
+  overflow: auto;
+}
+
+/* Custom Scrollbar */
+.code-container::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.code-container::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 10px;
+}
+
+.code-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #1e1e1e;
+}
+
+.code-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

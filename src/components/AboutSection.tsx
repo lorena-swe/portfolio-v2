@@ -6,9 +6,9 @@ import SectionTitle from "./SectionTitle";
 const AboutSection = () => (
   <div
     id="about"
-    className="section min-h-screen w-full px-24 flex justify-center items-center"
+    className="section min-h-screen w-full px-24 flex items-center"
   >
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center w-full">
       <SectionTitle sectionNumber={"01"} name="About Me" />
       <SkillsSection />
     </div>
