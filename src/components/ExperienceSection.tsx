@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import CompanyHoverCard from "./CompanyHoverCard";
 import "./ExperienceSection.css";
 import SectionTitle from "./SectionTitle";
@@ -6,6 +6,25 @@ import SectionTitle from "./SectionTitle";
 function ExperienceSection() {
   const [activeTab, setActiveTab] = useState("tab1");
   const [fadeClass, setFadeClass] = useState("fade-in");
+  const contentRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    // Calculate the height of the tallest content and set it as the minimum height
+    if (contentRef.current) {
+      const tab1ContentHeight =
+        contentRef.current.querySelector(".tab1-content")?.scrollHeight || 0;
+      const tab2ContentHeight =
+        contentRef.current.querySelector(".tab2-content")?.scrollHeight || 0;
+      const tab3ContentHeight =
+        contentRef.current.querySelector(".tab3-content")?.scrollHeight || 0;
+      const maxHeight = Math.max(
+        tab1ContentHeight,
+        tab2ContentHeight,
+        tab3ContentHeight
+      );
+      contentRef.current.style.minHeight = `${maxHeight + 15}px`;
+    }
+  }, []);
 
   const handleTabChange = (tab: string) => {
     if (tab !== activeTab) {
@@ -20,7 +39,7 @@ function ExperienceSection() {
   return (
     <div
       id="experience"
-      className="section min-h-screen w-full px-24 flex justify-center items-center"
+      className="section min-h-screen w-full px-24 flex items-center"
     >
       <div className="flex flex-col justify-center w-full">
         <SectionTitle sectionNumber="03" name="Where I've Worked" />
@@ -36,7 +55,7 @@ function ExperienceSection() {
               Deloitte
             </button>
             <button
-              className={`tabs-trigger w-full  ${
+              className={`tabs-trigger w-full ${
                 activeTab === "tab2" ? "active" : ""
               }`}
               onClick={() => handleTabChange("tab2")}
@@ -44,7 +63,7 @@ function ExperienceSection() {
               Salesforce Industries
             </button>
             <button
-              className={`tabs-trigger w-full  ${
+              className={`tabs-trigger w-full ${
                 activeTab === "tab3" ? "active" : ""
               }`}
               onClick={() => handleTabChange("tab3")}
@@ -52,9 +71,12 @@ function ExperienceSection() {
               Amazon
             </button>
           </div>
-          <div className="tabs-content-container max-w-full lg:max-w-xl">
+          <div
+            className="tabs-content-container max-w-full lg:max-w-xl"
+            ref={contentRef}
+          >
             {activeTab === "tab1" && (
-              <div className={`tabs-content ${fadeClass}`}>
+              <div className={`tabs-content tab1-content ${fadeClass}`}>
                 <div className="exp-title">
                   Frontend Engineer{" "}
                   <strong>
@@ -102,7 +124,7 @@ function ExperienceSection() {
               </div>
             )}
             {activeTab === "tab2" && (
-              <div className={`tabs-content ${fadeClass}`}>
+              <div className={`tabs-content tab2-content ${fadeClass}`}>
                 <div className="exp-title">
                   Salesforce Developer{" "}
                   <strong>
@@ -136,7 +158,7 @@ function ExperienceSection() {
               </div>
             )}
             {activeTab === "tab3" && (
-              <div className={`tabs-content ${fadeClass}`}>
+              <div className={`tabs-content tab3-content ${fadeClass}`}>
                 <div className="exp-title">
                   IT Support Engineer Intern{" "}
                   <strong>
