@@ -9,7 +9,7 @@ function Home() {
     >
       <img className="girl-image" src={girlImg} alt="Girl Image" />
       <p className="intro-text mb-4">Hi there! My name is</p>
-      <h1 className="name-text">Lorem Ipsum</h1>
+      <h1 className="name-text">Lorena Zotaj</h1>
       <h2 className="faded-text catchy-phrase pt-2 max-w-full lg:max-w-xl">
         I craft seamless user experiences.
       </h2>
