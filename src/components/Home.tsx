@@ -1,14 +1,16 @@
 import "./Home.css";
+import girlImg from "../assets/girl_insert_block_animated_gif.gif";
 
 function Home() {
   return (
     <div
       id="home"
-      className="section h-screen w-full py-10 px-8 md:px-16 flex flex-col justify-center"
+      className="home-section h-screen w-full py-10 px-8 md:px-16  flex flex-col justify-center"
     >
+      <img className="girl-image" src={girlImg} alt="Girl Image" />
       <p className="intro-text mb-4">Hi there! My name is</p>
       <h1 className="name-text">Lorem Ipsum</h1>
-      <h2 className="faded-text catchy-phrase pt-2">
+      <h2 className="faded-text catchy-phrase pt-2 max-w-full lg:max-w-xl">
         I craft seamless user experiences.
       </h2>
       <p className="max-w-full lg:max-w-xl faded-text d-parag mt-10">
@@ -33,6 +35,12 @@ function Home() {
         </strong>
         .
       </p>
+      {/* <a href="https://storyset.com/device">Device illustrations by Storyset</a> */}
+      {/* <a href="https://storyset.com/technology">Technology illustrations by Storyset</a> */}
+      {/* <a href="https://storyset.com/web">Web illustrations by Storyset</a> */}
+      {/* <a href="https://storyset.com/online">Online illustrations by Storyset</a> */}
+
+      {/* <a href="https://storyset.com/online">Online illustrations by Storyset</a> */}
     </div>
   );
 }

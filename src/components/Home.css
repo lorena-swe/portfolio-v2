@@ -70,6 +70,22 @@
 
 strong {
   color: rgb(56, 189, 248);
+  cursor: pointer;
+}
+
+strong:hover {
+  border-bottom: 1px solid rgb(56, 189, 248);
+}
+
+.home-section {
+  position: relative;
+}
+
+.girl-image {
+  position: absolute;
+  height: 80vh;
+  right: 0;
+  padding-right: 50px;
 }
 
 
