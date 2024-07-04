@@ -1,0 +1,41 @@
+
+
+
+.project-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.project-title:hover {
+  color: rgb(56, 189, 248);
+}
+
+.icon-link {
+  margin: 0 !important;
+  padding: 2px 5px;
+}
+
+.project-desc {
+  padding: 20px 25px 20px 0;
+  color: rgb(148, 163, 184);
+  font-size: 17px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-right: 10px;
+}
+
+.tech-stack li {
+  font-family: "Roboto Mono", monospace;
+  font-size: 13px;
+  background: rgba(56, 189, 248, 0.2);
+  color: rgb(56, 189, 248);
+  padding: 0 10px;
+  border-radius: 10px;
+  margin: 0 5px 5px 0;
+}
