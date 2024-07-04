@@ -39,13 +39,13 @@ function ExperienceSection() {
   return (
     <div
       id="experience"
-      className="section min-h-screen w-full px-24 flex items-center"
+      className="section min-h-screen w-full px-8 md:px-24 flex items-center"
     >
       <div className="flex flex-col justify-center w-full">
         <SectionTitle sectionNumber="03" name="Where I've Worked" />
 
-        <div className="tabs-container pt-12">
-          <div className="tabs-list flex flex-row sm:flex-col min-w-48">
+        <div className="tabs-container pt-12 flex flex-col md:flex-row">
+          <div className="tabs-list hidden invisible md:flex flex-col md:visible min-w-48">
             <button
               className={`tabs-trigger w-full ${
                 activeTab === "tab1" ? "active" : ""
@@ -64,6 +64,32 @@ function ExperienceSection() {
             </button>
             <button
               className={`tabs-trigger w-full ${
+                activeTab === "tab3" ? "active" : ""
+              }`}
+              onClick={() => handleTabChange("tab3")}
+            >
+              Amazon
+            </button>
+          </div>
+          <div className="flex flex-row md:hidden md:invisible w-full justify-between px-8 pb-8">
+            <button
+              className={`tabs-trigger-mobile ${
+                activeTab === "tab1" ? "active" : ""
+              }`}
+              onClick={() => handleTabChange("tab1")}
+            >
+              Deloitte
+            </button>
+            <button
+              className={`tabs-trigger-mobile ${
+                activeTab === "tab2" ? "active" : ""
+              }`}
+              onClick={() => handleTabChange("tab2")}
+            >
+              Salesforce Industries
+            </button>
+            <button
+              className={`tabs-trigger-mobile ${
                 activeTab === "tab3" ? "active" : ""
               }`}
               onClick={() => handleTabChange("tab3")}

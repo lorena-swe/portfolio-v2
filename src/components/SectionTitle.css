@@ -24,3 +24,10 @@
   left: 110%;
   transform: translateY(-50%);
 }
+
+@media screen and (max-width: 768px) {
+  .section-name::after {
+    display: none;
+    visibility: hidden;
+  }
+}

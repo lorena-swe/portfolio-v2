@@ -51,7 +51,7 @@ const ProjectCard = ({
   const projectImages = getImageByName(name);
 
   return (
-    <div className="project-card flex lg:flex-row gap-4 lg:pl-8 xl:pl-20 pt-12">
+    <div className="project-card flex lg:flex-row gap-4 lg:pl-8 xl:pl-20 pt-12 px-4 md:px-0">
       <div className="max-w-full xl:max-w-xl lg:pr-12">
         <div className="flex flex-row w-full items-center justify-between">
           <div className="project-title">
