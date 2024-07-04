@@ -1,7 +1,7 @@
 /* General styles */
 .tabs-container {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
 }
 
 .tabs-list {
