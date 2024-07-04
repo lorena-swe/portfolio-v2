@@ -1,15 +1,11 @@
 import { useState } from "react";
-import {
-  FaAddressCard,
-  FaBriefcase,
-  FaCode,
-  FaEnvelopeOpenText,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaAddressCard, FaBriefcase, FaCode } from "react-icons/fa";
 import logo from "../assets/react.svg";
 import SectionButton from "./SectionButton";
 import "./Sidebar.css";
+import IconGitHub from "./icons/IconGitHub";
+import IconLinkedin from "./icons/IconLinkedin";
+import IconGmail from "./icons/IconGmail";
 
 const Sidebar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -67,20 +63,20 @@ const Sidebar = () => {
           <div className="flex flex-col items-center">
             <a
               href="https://github.com/lorena-swe"
-              target="blank"
-              className="text-center"
+              target="_blank"
+              className="icon-link"
             >
-              <FaGithub />
+              <IconGitHub />
             </a>
             <a
               href="https://www.linkedin.com/in/lorena-zotaj/"
-              target="blank"
-              className="text-center"
+              target="_blank"
+              className="icon-link"
             >
-              <FaLinkedin />
+              <IconLinkedin />
             </a>
-            <a href="mailto:lorenazotaj10@gmail.com" className="text-center">
-              <FaEnvelopeOpenText />
+            <a href="mailto:lorenazotaj10@gmail.com" className="icon-link">
+              <IconGmail />
             </a>
           </div>
         </div>
