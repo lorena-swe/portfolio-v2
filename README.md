@@ -1,31 +1,66 @@
-# React + TypeScript + Vite
+<div id="top"></div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br />
+<div align="center">
+  <a href="https://lorena-swe-portfolio.vercel.app/">
+    <img src="src/assets/react.svg" alt="Logo" height="70px" width="auto" >
+  </a>
+  
+  <h3 align="center">Personal Portfolio</h3>
+  <p align="center">
+    <a href="https://lorena-swe-portfolio.vercel.app/">View Website</a>
+    ·
+    <a href="https://github.com/lorena-swe/portfolio-v2">Code</a>
+  </p>
+</div>
 
-Currently, two official plugins are available:
+<br /><br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+<!-- ABOUT THE PROJECT -->
+## About The Project
+<!--
+<p align="center">
+   <a href="https://lorena-swe-portfolio.vercel.app/">
+    <img src="src/assets/PortfolioDemoGif.gif">
+  </a>
+</p>
+-->
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+A fully responsive personal portfolio, displaying all my techs & tools, as well as the pet projects I'm most proud of.
+Plus, a little touch of web design, which is something I really love and appreaciate!
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# portfolio-v2
+
+### Built With
+
+* React
+* TypeScript
+* Tailwind CSS
+* HTML
+* CSS
+* Radix UI
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running, follow these simple example steps.
+* Clone the repo
+* Run npm install
+  ```sh
+  npm install
+  ```
+ * Run the app in development mode:
+   ```sh
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) (port number might differ) to view it in your browser.
+   <br />
+   The page will reload as you make changes to che code.
+
+<br />
+
+<p align="right">(<a href="#top">back to top</a>)</p>
