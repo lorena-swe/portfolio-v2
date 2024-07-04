@@ -1,0 +1,26 @@
+.section-number {
+  font-family: "Roboto Mono", monospace;
+  color: rgb(56, 189, 248);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  padding-left: 10px;
+  position: relative;
+}
+
+.section-name::after {
+  content: "";
+  display: block;
+  height: 0.5px;
+  background-color: rgba(148, 163, 184, 0.2);
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+}

@@ -40,27 +40,35 @@ const skillsData = [
 
 const SkillsSection = () => {
   return (
-    <div className="skills-section px-16">
-      <h2>My Skills</h2>
+    <div className="skills-section pt-12">
+      {/* <h2>My Skills</h2> */}
 
       <div className="flex flex-col lg:flex-row">
         <div className="max-w-full lg:max-w-sm xl:max-w-xl about-intro">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse et
-          asperiores vitae explicabo laudantium repellat expedita doloribus
-          consequatur rerum adipisci nemo iusto, repudiandae tempora suscipit,
-          ipsum cumque, quibusdam veniam. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Odit esse et asperiores vitae explicabo laudantium
-          repellat expedita doloribus consequatur rerum adipisci nemo iusto,
-          repudiandae tempora suscipit, ipsum cumque, quibusdam veniam.
+          Hello there!
           <br />
           <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse et
-          asperiores vitae explicabo laudantium repellat expedita doloribus
-          consequatur rerum adipisci nemo iusto, repudiandae tempora suscipit,
-          ipsum cumque, quibusdam veniam.
+          I'm a passionate <span>frontend engineer</span> with 2 years of
+          experience, dedicated to crafting modular, scalable, and beautiful
+          user experiences. While my primary focus is on frontend development, I
+          also have a strong grasp of full-stack technologies.
+          <br />
+          <br />
+          As a developer, I thrive on creating dynamic and responsive web
+          applications using <span>React</span> and <span>Next.js</span>
+          . My expertise extends to various modern web development technologies,
+          and I continuously challenge myself through diverse projects.
+          <br />
+          <br />
+          My goal is to join a forward-thinking team where I can contribute to{" "}
+          <span>innovative projects</span> and continue to{" "}
+          <span>grow as a developer</span>. I am enthusiastic about continuous
+          learning and always eager to take on{" "}
+          <span>new challenges that push my boundaries</span>. Let's connect and
+          create something amazing together!
         </div>
 
-        <div className="flex-1 skills-section lg:pl-16">
+        <div className="flex-1 skills-section lg:pl-12">
           {skillsData.map((skill, index) => (
             <div
               className="skill-card"
