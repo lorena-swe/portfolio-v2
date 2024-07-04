@@ -69,6 +69,13 @@ span {
   transition: opacity 0.5s ease;
 }
 
+@media (max-width: 550px) {
+  .skills-section {
+    padding: 0;
+    padding-top: 1rem;
+  }
+}
+
 @media (max-width: 480px) {
   .skill-card {
     width: 80px;

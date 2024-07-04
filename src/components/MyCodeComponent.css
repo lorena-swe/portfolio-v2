@@ -1,17 +1,17 @@
 .code-tab {
   width: 100%;
-  background-color: rgb(30, 30, 30); /* Background color similar to VSCode */
+  background-color: rgb(30, 30, 30);
   border-radius: 10px;
   overflow: hidden;
   /* margin: 20px 0; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .tab-header {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: rgb(20, 20, 20); /* Darker color for the header */
+  background-color: rgb(20, 20, 20);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }

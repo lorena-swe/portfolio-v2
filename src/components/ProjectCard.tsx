@@ -71,17 +71,8 @@ const ProjectCard = ({
         <div className="project-desc">{description}</div>
         <ul className="tech-stack">
           {skills.map((skill) => (
-            <li>{skill}</li>
+            <li key={skill}>{skill}</li>
           ))}
-          {/* <li>Next.js</li>
-          <li>React</li>
-          <li>TypeScript</li>
-          <li>HTML</li>
-          <li>Tailwind CSS</li>
-          <li>Radix UI</li>
-          <li>NextAuth.js</li>
-          <li>Prisma</li>
-          <li>MySql</li> */}
         </ul>
       </div>
       <div className="hidden xl:flex flex-1 px-8 items-center relative">
