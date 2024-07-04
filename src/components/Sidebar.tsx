@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { FaAddressCard, FaBriefcase, FaCode } from "react-icons/fa";
+import { FaAddressCard, FaBars, FaBriefcase, FaCode } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
 import logo from "../assets/react.svg";
 import SectionButton from "./SectionButton";
 import "./Sidebar.css";
 import IconGitHub from "./icons/IconGitHub";
-import IconLinkedin from "./icons/IconLinkedin";
 import IconGmail from "./icons/IconGmail";
+import IconLinkedin from "./icons/IconLinkedin";
 
 const Sidebar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,6 +21,15 @@ const Sidebar = () => {
 
   const handleSectionClick = (sectionName: string) => {
     setCurrentSection(sectionName);
+  };
+
+  const handleMobileSectionClick = (sectionName: string) => {
+    handleSectionClick(sectionName);
+
+    const section = document.getElementById(sectionName);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const sections = [
@@ -84,10 +94,10 @@ const Sidebar = () => {
 
       {/* Mobile Sibar Panel */}
       <button
-        className="md:hidden absolute top-0 right-0 p-3"
+        className="hamburger-menu md:hidden"
         onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
       >
-        📰
+        {isMobileMenuOpen ? <FaXmark fontSize="30px" /> : <FaBars />}
       </button>
       {isMobileMenuOpen && (
         <div
@@ -95,43 +105,48 @@ const Sidebar = () => {
             isMobileMenuOpen ? "open" : "closed"
           }`}
         >
-          <div className="h-full w-full max-w-xs bg-gray-500">
+          <div className="mobile-sidebar h-full w-full max-w-xs">
             <div className="flex md:hidden flex-col h-full w-full">
-              <button
-                className="self-end mb-4"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                ✖️
-              </button>
-
-              {/* Logo */}
-              <div className="flex items-center h-16 bg-gray-300">
-                <img alt="Logo" src={logo} />
-              </div>
-
               {/* Section Buttons */}
-              <div className="flex-1 flex flex-col">
-                <button className="px-4 py-2 mb-2 text-gray-800 bg-gray-300 hover:bg-gray-400 text-left">
+              <div className="flex-1 flex flex-col pt-24">
+                <button
+                  className="section-button-mobile"
+                  onClick={() => handleMobileSectionClick("about")}
+                >
                   About
                 </button>
-                <button className="px-4 py-2 mb-2 text-gray-800 bg-gray-300 hover:bg-gray-400 text-left">
+                <button
+                  className="section-button-mobile"
+                  onClick={() => handleMobileSectionClick("projects")}
+                >
                   Projects
                 </button>
-                <button className="px-4 py-2 mb-2 text-gray-800 bg-gray-300 hover:bg-gray-400 text-left">
+                <button
+                  className="section-button-mobile"
+                  onClick={() => handleMobileSectionClick("experience")}
+                >
                   Experience
                 </button>
               </div>
 
               {/* Social Buttons */}
-              <div className="flex flex-row bg-gray-300 pb-5">
-                <a href="#" className="text-gray-800 hover:text-gray-600 mx-2">
-                  GitHub
+              <div className="flex flex-row justify-center pb-10 gap-8">
+                <a
+                  href="https://github.com/lorena-swe"
+                  target="_blank"
+                  className="icon-link"
+                >
+                  <IconGitHub />
                 </a>
-                <a href="#" className="text-gray-800 hover:text-gray-600 mx-2">
-                  LinkedIn
+                <a
+                  href="https://www.linkedin.com/in/lorena-zotaj/"
+                  target="_blank"
+                  className="icon-link"
+                >
+                  <IconLinkedin />
                 </a>
-                <a href="#" className="text-gray-800 hover:text-gray-600 mx-2">
-                  Email
+                <a href="mailto:lorenazotaj10@gmail.com" className="icon-link">
+                  <IconGmail />
                 </a>
               </div>
             </div>
