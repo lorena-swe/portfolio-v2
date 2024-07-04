@@ -60,7 +60,7 @@ const Sidebar = () => {
           </div>
 
           {/* Social Buttons */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center gap-2">
             <a
               href="https://github.com/lorena-swe"
               target="_blank"

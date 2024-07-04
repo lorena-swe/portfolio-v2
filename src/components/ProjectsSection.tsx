@@ -10,7 +10,7 @@ const ProjectsSection = () => (
     <div className="flex flex-col justify-center w-full">
       <SectionTitle sectionNumber={"02"} name="Things I've Built" />
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         <ProjectCard
           name="Issue Tracker"
           repoLink="https://github.com/lorena-swe/issue-tracker"

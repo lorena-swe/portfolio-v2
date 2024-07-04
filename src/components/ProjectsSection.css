@@ -79,3 +79,8 @@
 .image-wrapper:hover .hover-bg {
   opacity: 1;
 }
+
+.project-card:not(:last-child) {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  padding-bottom: 2.5rem; /* Adjust as needed for spacing */
+}
