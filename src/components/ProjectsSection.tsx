@@ -7,14 +7,14 @@ import "./ProjectsSection.css";
 const ProjectsSection = () => (
   <div
     id="projects"
-    className="section min-h-screen w-full px-24 flex items-center"
+    className="section min-h-screen w-full px-4 lg:px-24 flex items-center"
   >
     <div className="flex flex-col justify-center w-full">
       <SectionTitle sectionNumber={"02"} name="Things I've Built" />
 
-      <div className="project-card flex flex-row gap-4 pl:px-8 xl:px-20 pt-12">
-        <div className="max-w-full lg:max-w-lg xl:max-w-xl lg:pr-12">
-          <div className="flex flex-row items-center justify-between">
+      <div className="project-card flex lg:flex-row gap-4 lg:pl-8 xl:pl-20 pt-12">
+        <div className="max-w-full xl:max-w-xl lg:pr-12">
+          <div className="flex flex-row w-full items-center justify-between">
             <div className="project-title">
               <a
                 href="https://lorena-swe-issue-tracker.vercel.app/"
@@ -59,8 +59,8 @@ const ProjectsSection = () => (
             <li>MySql</li>
           </ul>
         </div>
-        <div className="flex-1 px-8 flex items-center">
-          <img src={background} alt="Project Image" />
+        <div className="hidden xl:flex flex-1 px-8 items-center">
+          <img src={background} alt="Project Image" className="xl:max-w-sm" />
         </div>
       </div>
     </div>
