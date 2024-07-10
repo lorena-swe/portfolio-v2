@@ -56,7 +56,7 @@ npm install npm@latest -g
 
 1. Clone the repo
 ```sh
-git clone https://github.com/lorena-swe/game-hub.git
+git clone https://github.com/lorena-swe/portfolio-v2.git
 ```
 
 2. Install NPM Packages
